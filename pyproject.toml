@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "mkdocs-translations"
+version = "0.1.1"
+description = "Internationalization plugin for mkdocs"
+authors = ["Pavel Kirilin <win10@list.ru>"]
+maintainers = ["Pavel Kirilin <win10@list.ru>"]
+readme = "README.md"
+
+keywords = [
+  "mkdocs",
+  "plugin",
+  "i18n",
+  "translate",
+  "translations"
+]
+
+classifiers = [
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+mkdocs = "^1.1.2"
+loguru = "^0.5.3"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6"
+mypy = "^0.812"
+yesqa = "^1.2.2"
+isort = "^5.7.0"
+black = "^20.8b1"
+flake8 = "^3.8.4"
+autoflake = "^1.4"
+pre-commit = "^2.11.1"
+wemake-python-styleguide = "^0.15.2"
+
+[tool.poetry.plugins."mkdocs.plugins"]
+translations = "mkdocs_translations.plugin:Translator"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
